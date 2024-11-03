@@ -20,6 +20,8 @@ jobs:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         ORGANIZATION: ${{ secrets.ORGANIZATION }}
         INACTIVE_DAYS: 0
+        ACTIVITY_METHOD: "pushed"
+        ADDITIONAL_METRICS: "release,pr"
 
     - name: Create issue
       uses: peter-evans/create-issue-from-file@v4
@@ -27,3 +29,4 @@ jobs:
         title: Stale repository report
         content-filepath: ./stale_repos.md
         assignees: gauravnegi100
+        token: ${{ secrets.GH_TOKEN }}

@@ -44,7 +44,7 @@ jobs:
           issue-number: ${{ env.issue_number }}
           title: Stale repository report
           content-filepath: ./stale_repos.md
-          assignees: 
+          assignees: gauravnegi100
           token: ${{ secrets.GITHUB_TOKEN }}
 
 

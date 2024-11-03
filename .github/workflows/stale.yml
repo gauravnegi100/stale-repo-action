@@ -19,7 +19,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         ORGANIZATION: ${{ secrets.ORGANIZATION }}
-        INACTIVE_DAYS: 365
+        INACTIVE_DAYS: 10
 
     - name: Create issue
       uses: peter-evans/create-issue-from-file@v4
